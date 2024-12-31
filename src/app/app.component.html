@@ -1,7 +1,12 @@
-<p>{{data()}}</p>
-<p>No data available yet. Please load some.</p>
+@if (data()) {
+  <p>{{data()}}</p>
+} @else {
+  <p>No data available yet. Please load some.</p>
+}
 
-<app-loader></app-loader>
+@if (isLoading()) {
+  <app-loader></app-loader>
+}
 
 <button [disabled]="isLoading()" (click)="loadData()">Load data</button>
 <button (click)="clear()" id="delete-button">Clear data</button>
