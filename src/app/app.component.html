@@ -1,0 +1,13 @@
+<p>{{data}}</p>
+<p>No data available yet. Please load some.</p>
+
+<app-loader></app-loader>
+
+<button [disabled]="isLoading" (click)="loadData()">Load data</button>
+<button (click)="clear()" id="delete-button">Clear data</button>
+
+
+<!-- 1. Show the loader when data is being loaded ( = the variable isLoading is true) -->
+<!-- 2. Show either the data (line 1) or the no data message (line 2) depending on wether there is data to show or not (emtpy string) -->
+
+<!-- TIP: All the changes are to be made in this file, no need to change anything in the ts file -->
